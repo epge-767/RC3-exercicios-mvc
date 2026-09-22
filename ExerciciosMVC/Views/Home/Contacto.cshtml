@@ -1,0 +1,14 @@
+﻿@{
+    if (ViewBag.Nome == null || ViewBag.Nome == "")
+    {
+        <form asp-action="Contacto" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" />
+            <button type="submit">Enviar</button>
+        </form>
+    }
+    else
+    {
+        <h1>Olá @ViewBag.Nome</h1>
+    }
+}
